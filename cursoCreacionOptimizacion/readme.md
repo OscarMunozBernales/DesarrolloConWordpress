@@ -1,7 +1,7 @@
 # Curso de creación y optimización de sitios web con wordpress
 
 # 1. Introducción
-## ¿Porque aprender a usar wordpress?
+## 1.1. ¿Porque aprender a usar wordpress?
 Internet es un universo que se compone de dos elementos muy importantes
  - **Buscadores**: Nos brindan el acceso a la información de tood lo que existe en internet
  - **Páginas Web**: Portales que nos permiten ver el contenido que se presenta. Pueden ser blogs, webs, tiendas online, etc. Las páginas web se pueden desarrollar en distintas herramientas como **blogger**, **Joomla**, **Wordpress**, entre otras.
@@ -18,3 +18,6 @@ El objetivo de todas las páginas web es ser visitadas; cuando no lo son pueden 
 Existe una herramienta gratuita muy importante y útil tanto para el desarrollo web y SEO; también para analizar la competencia: [SimilarWeb](https://www.similarweb.com/)
 Esta herramienta nos permiete hacer un análisis del tráfico de las páginas e identificar de dónde es que proviene.
 **Wordpress** nos ayudará para que una página se vea muy bien, sea profesional, que tenga un excelente desarrollo y un desempeño en los buscadores.
+
+# 2. Wordpress y SEO: primeros pasos
+## 2.1. Conceptos fundamentales
