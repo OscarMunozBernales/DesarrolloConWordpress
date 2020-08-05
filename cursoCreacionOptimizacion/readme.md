@@ -21,3 +21,13 @@ Esta herramienta nos permiete hacer un análisis del tráfico de las páginas e 
 
 # 2. Wordpress y SEO: primeros pasos
 ## 2.1. Conceptos fundamentales
+Conceptos fundamentales que de debes saber para entender todo el procesos de elaboración de una página web posicionada con **wordpress**:
+- **Palabra Clave**: Términos compuestos por una o más palabras, que las personas utilizan para encontrarinformación en los diferentes motores de búsqueda en internet. Una vez que le buscador recibe la solicitud, comienza a elaborar un listado de resultados.
+- **Dominio**: Es el nombre único que identifica a una página web en internet. Su objetivo es traducir la dirección IP a términos fáciles de memorizar, encontrar y compartir.
+- **Hosting**: Servicio que prestan empresas uqe tienen supercomputadoras o servicios preparados para altos rendimientos en espacio, velocidad y procesamiento, donde almacenan los archivos de tu web para que cualquier persona en internet pueda verla.
+- **S.E.O. (Search Engine Optimization u Optimización para motores de búsqueda)**: Son una serie de técnicas de contenidos y desarollo web que buscan lograr un buen posicionamiento en buscadores.
+
+**Proveedores o herramientas que usaremos en el curso**:
+- Para hacer estudio de palabra clave: **ahrefs** y [kwfinder](https://kwfinder.com/es/).
+- Para comprar dominio: **namecheap**
+- Para contratar hosting: **banahosting**
