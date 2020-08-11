@@ -232,3 +232,13 @@ Organizaremos mejor nuestro código para ello lo separaremos en otro archivo lla
 Usaremos la palabra reservada **include** para hacer que el archivo index incluya el archivo jobs.php, si lo encuentra lo incluye, pero si no nos mostrará un warning. Existe otro llamado require que si no lo encuentra nos muestra un error en todo el archivo.
 
 Los métodos **include** y **require** ejecutan el código del archivo cada vez que lo incluyen, esto puede traer errores en la ejecución de tu código si tienes archivos con funciones pues te dirá que no puedes declarar dos veces una función con el mismo nombre. Para resolver esto existen **include_once** y **require_once** que obligan a incluir una sola vez el archivo.
+
+# 3. Programación orientada a objetos (POO)
+## 3.1. Introducción
+La programación orientada a objetos nos ayudará a estructurar mejor nuestros programas. PHP a partir de su versión 5 tiene implementaciones orientadas a objetos, lo que lo hace tener código más reutilizable y mantenible.
+
+Una clase es una plantilla o definición de algo. Y una instancia es la representación concreta de la clase.
+
+Encapsulamiento será el nivel de visibilidad que queramos darle a alguna variable, para ello podemos utilizar los modificadores de acceso **private**, **public** y **protected**.
+
+Con la palabra reservada **this** estaremos haciendo referencia a la variable que pertenece a la clase.
