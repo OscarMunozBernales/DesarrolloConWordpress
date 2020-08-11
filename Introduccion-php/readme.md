@@ -218,3 +218,10 @@ for ($i = 0; $i < count($jobs); $i++) {
 }
 ?>
 ```
+
+## 2.6. Funciones
+Las funciones en PHP se denotan por la palabra reservada function seguida por el nombre de la función, las funciones nos servirán para llamar y reutilizar código en nuestros proyectos.
+
+Cuando trabajemos con funciones es muy importante cuidar el scope (alcance) de las variables pues, algunas podrían entrar en su scope y otras no.
+
+Las funciones en PHP pueden o no regresar un dato particular. Si deseamos hacerlo podemos indicarlo con la palabra reservada return.
