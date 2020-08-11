@@ -22,3 +22,17 @@ Es interpretado, multiplataforma, open source, el cual ha sido muy popular en lo
 - No es un lenguaje compilado, por lo cual siempre tendrás que llevar juntos tu código y tu interprete.
 - No esta diseñado para realizar aplicaciones de escritorio.
 
+# 2. Conceptos básicos de PHP
+
+## 2.1. Sintaxis de PHP
+Hagamos el ejemplo más sencillo para trabajar con PHP. Siempre que usemos PHP usaremos lo siguiente: 
+```php
+<?php ?> 
+```
+todo lo que pongamos dentro de esto será lo que el servidor va a interpretar como código php, lo que esté fuera lo ignorará.
+
+Para acceder a él lo haremos localhost:8080/hello.php porque el servidor abre por defecto el archivo index y nuestro nuevo archivo se llama hello.php.
+
+Si queremos escribir código php en nuestra vista HTML tendremos que cambiarle la extensión al archivo por .php porque nuestro servidor esta configurado a solo interpretar archivos PHP. Solo las partes dentro de <?php ?> van a ser interpretadas y su código fuente no será visible desde el navegador.
+
+Todas las sentencias de código se separarán con un ; (punto y coma).
