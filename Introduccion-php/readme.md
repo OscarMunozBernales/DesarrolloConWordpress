@@ -12,3 +12,13 @@ En este curso veremos:
 - Implementaremos librerías de terceros.
 - Estructuraremos nuestro proyecto de una forma muy profesional que te servirá para futuros proyectos.
 - Utilizaremos la versión 7.2 de PHP.
+
+## 1.2. ¿Qué es php?
+PHP es un lenguaje de programación de propósito general de alto nivel que fue diseñado especialmente para el desarrollo de aplicaciones web.
+
+Es interpretado, multiplataforma, open source, el cual ha sido muy popular en los últimos años.
+
+¿Qué NO es PHP?
+- No es un lenguaje compilado, por lo cual siempre tendrás que llevar juntos tu código y tu interprete.
+- No esta diseñado para realizar aplicaciones de escritorio.
+
