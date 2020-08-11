@@ -182,3 +182,39 @@ PHP utiliza índices para localizar a los elementos dentro de la variable.
 La estructura de arreglos en PHP es conocida como mapa, lo que quiere decir que tiene una composición de llave valor. Además, un arreglo puede contener más arreglos y cada uno de ellos seguirá la misma estructura.
 
 Algo que debes saber es que en PHP podrás almacenar diferentes tipos de datos en un mismo arreglo.
+
+## 2.5. Condicionales y ciclos
+Las condiciones nos permiten tomar decisiones en el código, si se cumple la condición entonces se ejecutarán ciertas instrucciones sino se cumple se ejecutarán otras. Estas se denotan por la instrucción **if else**.
+
+```php
+<?php 
+$esVerdadero = false;
+if ( $esVerdadero ) {
+    // SI ES VERDADERO, SE EJECUTA ESTA PARTE DEL CÓDIGO
+} else {
+    // DE LO CONTRARIO, SE EJECUTA ESTA PARTE DEL CÓDIGO
+}
+
+?>
+```
+
+Los ciclos funcionan de la mano con las condiciones, en este caso si se cumple la instrucción se estará ejecutando repetidas veces una instrucción dada.
+
+Hemos agregado los jobs de forma manual accediendo al arreglo a través de sus índices, hacer esto podría traer errores y no podríamos controlarlo si tuviéramos muchos jobs. Ahora veamos una mejor forma de hacerlo con ciclos.
+- El primero que tenemos es **do while** que va a involucrar la inicialización de variables y condiciones.
+- El segundo que veremos es **for** que es una forma más simplificada de usar todos los elementos que componen los ciclos.
+
+```php
+<?php 
+$cont = 0;
+do{
+    ++$cont;
+}while( $cont < 10);
+
+$jobs = ['', '', '', ...];
+
+for ($i = 0; $i < count($jobs); $i++) {
+    echo $jobs[$i];
+}
+?>
+```
