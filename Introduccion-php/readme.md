@@ -225,3 +225,10 @@ Las funciones en PHP se denotan por la palabra reservada function seguida por el
 Cuando trabajemos con funciones es muy importante cuidar el scope (alcance) de las variables pues, algunas podrían entrar en su scope y otras no.
 
 Las funciones en PHP pueden o no regresar un dato particular. Si deseamos hacerlo podemos indicarlo con la palabra reservada return.
+
+## 2.7. Agregando archivos externos
+Organizaremos mejor nuestro código para ello lo separaremos en otro archivo llamado jobs.php.
+
+Usaremos la palabra reservada **include** para hacer que el archivo index incluya el archivo jobs.php, si lo encuentra lo incluye, pero si no nos mostrará un warning. Existe otro llamado require que si no lo encuentra nos muestra un error en todo el archivo.
+
+Los métodos **include** y **require** ejecutan el código del archivo cada vez que lo incluyen, esto puede traer errores en la ejecución de tu código si tienes archivos con funciones pues te dirá que no puedes declarar dos veces una función con el mismo nombre. Para resolver esto existen **include_once** y **require_once** que obligan a incluir una sola vez el archivo.
