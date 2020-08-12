@@ -99,3 +99,14 @@ Con los archivos JS, vamos a ocupar dos funciones:
     - **$deps (array())**.
     - **$version (string | bool | null)**.
     - **$in_footer (bool)**
+
+# 6. Recorrido por el administrador.
+El administrador es la parte más fuerte de Wordpress. es una interfaz gráfica desde la cual se pueden administrar todos los contenidos del sitio, esto incluye: entradas de blog, comentarios, imágenes, videos, plugins etc.
+Las principales secciones del administrador son las siguientes:
+- **Escritorio**: Sugerencia de flujo de trabajo, muestra de la actividad en entradas (textos de blog) y sus comentarios y un borrador rápido donde es posible dejarnos notas para leer en el futuro. ![](assets/escritorio_wp.png)
+- **Entradas**: Notas de blog, en caso de que tengamos una página de novedades, se pueden añadir nuevas, eliminar entradas, gestionar categorías y etiquetas. ![](assets/entradas_wp.png)
+- **Medios**: Aquí se van a encontrar todas las imágenes, videos y auidios que subamos. ![](assets/biblioteca_wp.png)
+- **Páginas**: Secciones de nuestro sitio por las cuales vamos a navegar. ![](assets/paginas_wp.png)
+- **Comentarios**: Se pueden administrar los comentarios en caso de que tengamos entradas de blogs: bloquear usuarios que hagan ciertos comentarios, aprobarlos, o mandar los comentarios a spam. ![](assets/comentarios_wp.png)
+- **Apariencia**: Aquí se puede gestionar todo lo referente a nuestros temas. Seleccionar el que deseemos, realizar modificaciones de las secciones que componen los temas (colores y otras opciones), crear los menús de navegación, y editar el código del tema sin tener que entrar directamente al archivo. ![](assets/apariencia_wp.png)
+- **Plugins**: Se administran los plugins que tendrá nuestro sitio. Uno instalado por defecto es el de control de spam en los comentarios. El editor de plugins nos permite editar el código de estos sin necesidad de salir del administrador. ![](assets/plugins_wp.png)
