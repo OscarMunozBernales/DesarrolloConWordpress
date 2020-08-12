@@ -1,9 +1,9 @@
 # FOLDER
 platzigift/wp-admin
 platzigift/wp-content/plugins
-platzigift/wp-content/themes/twentynineteen
-platzigift/wp-content/themes/twentyseventeen
-platzigift/wp-content/themes/twentytwenty
+platzigift/wp-content/themes/twentynineteen/
+platzigift/wp-content/themes/twentyseventeen/
+platzigift/wp-content/themes/twentytwenty/
 platzigift/wp-includes
 
 # FILES
