@@ -242,3 +242,53 @@ Una clase es una plantilla o definición de algo. Y una instancia es la represen
 Encapsulamiento será el nivel de visibilidad que queramos darle a alguna variable, para ello podemos utilizar los modificadores de acceso **private**, **public** y **protected**.
 
 Con la palabra reservada **this** estaremos haciendo referencia a la variable que pertenece a la clase.
+
+## 3.2. Contructor y métodos
+```php
+<?php
+
+// CLASE EJEMPLO
+class Jobs{
+    private $title;
+    public $description;
+    public $visible;
+    public $months;
+
+    public function __construct( $title, $description, $visible = null, $months = null ){
+        $this->title = $title;
+        $this->description = $description;
+        $this->visible = $visible;
+        $this->months = $months;        
+    }
+
+    public function __get($title){
+        return $this->title;
+    }
+
+    public function __set( $title, $valor ){
+        $this->title = $valor;
+    }
+
+    public function setTitle( $title ){
+
+        $this->title = $title == '' ? 'N/A' : $title;
+    }
+
+    public function getTitle(){
+        return $this->title;
+    }
+
+    public function getDurationAsString () {
+        $year = floor( $this->months / 12 );
+        $extraMonths = ($this->months % 12);
+
+        return "$year years $extraMonths months";
+    }
+}
+
+$job1 = new Jobs('Hola mundo', 'Es un mensaje');
+$job1->title2 = 'valor';
+echo ($job1->title2);
+
+?>
+```
