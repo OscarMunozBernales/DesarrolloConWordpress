@@ -44,7 +44,7 @@ Son la estructura de archivos la cual va a generar las vistas en nuestro navegad
 7. **screenshot.png**: Este archivo será nuestra imagen de muestra, en la seleccion de theme en el administrador.
 8. **single.php**: Es la vista que carga por defecto entradas, post , etc, cuando no se especifica una.
 
-# ¿Qué son los Hooks en Wordpress?
+# 4. ¿Qué son los Hooks en Wordpress?
 Son lugares dentro del código funete de WP en los cuales podemos agregar código propio o modificar datos que el mismo nos provee.
 ## Tipos de Hooks
 1. **Action**: Nos permite ejecutar una función personalizada en un punto específico del código fuente de WP. funciona de la siguiente forma:
@@ -69,3 +69,33 @@ Son lugares dentro del código funete de WP en los cuales podemos agregar códig
     add_filter('the_title', 'upperTitle')
     ?>
     ```
+
+# 5. Manejo de librerías en Wordpress
+Para cada tipo de archivos, vamos a ocupar una funcion diferente.
+## Archivos CSS
+Con los archivos CSS  vamos a ocupar dos funciones:
+- **wp_register_style()**: Esta función nos van a servir para tener un registro de las dependencias css que tengamos, pero no las va a ejecutar en nuestro HTML, esta funcion recive 5 argumentos:
+    - **$handle (string)**: puede tener el nombre que nosotros querramos.
+    - **$src (string | bool)**.
+    - **$deps (array())**.
+    - **$version (string | bool | null)**.
+    - **$media (string)**.
+- **wp_enqueue_style()**: Nos va a ejecutar directamente la librería que nosotros le digamos, pero va a llamar las refencias sin necesitar alguna que tengamos registradas. esta funcion recive 5 argumentos:
+    - **$handle (string)**: puede tener el nombre que nosotros querramos.
+    - **$src (string | bool)**.
+    - **$deps (array())**.
+    - **$version (string | bool | null)**.
+    - **$media (string)**.
+Con los archivos JS, vamos a ocupar dos funciones:
+- **wp_register_script()**: la funcionalidad y los argumentos son similares al **wp_register_style**, va a cambiar un argumento llamado $in_footer:
+    - **$handle (string)**: puede tener el nombre que nosotros querramos.
+    - **$src (string | bool)**.
+    - **$deps (array())**.
+    - **$version (string | bool | null)**.
+    - **$in_footer (bool)**
+- **wp_enqueue_script()**:
+    - **$handle (string)**: puede tener el nombre que nosotros querramos.
+    - **$src (string | bool)**.
+    - **$deps (array())**.
+    - **$version (string | bool | null)**.
+    - **$in_footer (bool)**
