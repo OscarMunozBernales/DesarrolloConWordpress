@@ -9,4 +9,21 @@ platzigift/wp-includes
 # FILES
 platzigift/wp-content/index.php
 platzigift/wp-content/themes/index.php
-platzigift/*
+platzigift/.htaccess
+platzigift/index.php
+platzigift/license.txt
+platzigift/readme.html
+platzigift/wp-activate.php
+platzigift/wp-blog-header.php
+platzigift/wp-comments-post.php
+platzigift/wp-config.php
+platzigift/wp-config-sample.php
+platzigift/wp-cron.php
+platzigift/wp-links-opml.php
+platzigift/wp-load.php
+platzigift/wp-login.php
+platzigift/wp-mail.php
+platzigift/wp-settings.php
+platzigift/wp-signup.php
+platzigift/wp-trackback.php
+platzigift/xmlrpc.php
