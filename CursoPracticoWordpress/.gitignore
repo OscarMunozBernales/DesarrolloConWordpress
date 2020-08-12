@@ -1,0 +1,12 @@
+# FOLDER
+platzigift/wp-admin
+platzigift/wp-content/plugins
+platzigift/wp-content/themes/twentynineteen
+platzigift/wp-content/themes/twentyseventeen
+platzigift/wp-content/themes/twentytwenty
+platzigift/wp-includes
+
+# FILES
+platzigift/wp-content/index.php
+platzigift/wp-content/themes/index.php
+platzigift/*
