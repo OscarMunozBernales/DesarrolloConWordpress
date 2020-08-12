@@ -43,3 +43,29 @@ Son la estructura de archivos la cual va a generar las vistas en nuestro navegad
 6. **page.php**: Es la vista que carga por defecto páginas (vistas), cuando no se especifica una.
 7. **screenshot.png**: Este archivo será nuestra imagen de muestra, en la seleccion de theme en el administrador.
 8. **single.php**: Es la vista que carga por defecto entradas, post , etc, cuando no se especifica una.
+
+# ¿Qué son los Hooks en Wordpress?
+Son lugares dentro del código funete de WP en los cuales podemos agregar código propio o modificar datos que el mismo nos provee.
+## Tipos de Hooks
+1. **Action**: Nos permite ejecutar una función personalizada en un punto específico del código fuente de WP. funciona de la siguiente forma:
+    - funciona con una funcion llamada **add_action** el cual va hacer referencia en algún lugar del código fuente de wordpress que va a estar marcado por un **do_action** y la va a ejecutar justo en ese lugar.
+    ![](assets/add_action.png)
+    ```php
+    <?php 
+    
+    function holaMundo(){
+        echo 'HOLA MUNDO';
+    }
+
+    add_action( 'wp_head', 'holaMundo' );
+    // add_action( $hook, $functionName );
+    ?>
+    ```
+2. **Filter**: Nos permiten ejectuar una función personalizada en un determinado punto, pero la función que usemos tendrá un parámetro de entrada, dentro de nuestra función heramos modificaciones al parámetro y finalmente lo retornaremos modificado. ![](assets/add_filter.png)
+    - ejemplo: 
+    ```php
+    <?php 
+    function upperTitle( $title ) return strtoupper( $title );
+    add_filter('the_title', 'upperTitle')
+    ?>
+    ```
