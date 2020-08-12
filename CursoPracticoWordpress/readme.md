@@ -24,3 +24,22 @@ WP funciona de la siguiente manera:
 - Flexible: Permite personalizar tanto su dieseño como sus funcionalidades.
 - Actualizaciones: Está en constante crecimiento.
 - Comunidad: Cuenta con una gran comunidad que aporta a su desarrollo.
+
+# 3. ¿Qué son los temas en Wordpress?
+## Theme
+Son la estructura de archivos la cual va a generar las vistas en nuestro navegador. Estos archivos toman la información de la base de datos **MySql** y genera el código **HTML** que envía al navegador.
+
+### Archivos Obligatorios de un theme
+
+1. **index.php**: Archivo principal de nuestro theme y página de inicio. Todas las vistas que nosotros generemos van a tomar por defecto nuestro archivo index.php
+2. **style.css**: Archivo principal de estilos y parametros de la plantilla.
+
+### Otros archivos que vamos a utilizar 
+1. **front-page.php**: Es la vista de carga por defecto, de la página principal.
+2. **footer.php**: En este archivo indicaremos la información del pie de página.
+3. **functions.php**: Es el archivo central de todas las funcionalidades de nuestro theme, basicamente amplia las funcionalidades del código fuente.
+4. **header.php**: En este archivo se indica la información del encabezado.
+5. **404.php**: En este archivo se indica la información que se mostrará cuando alguien ingrese a una URL de nuestro sitio que no exista.
+6. **page.php**: Es la vista que carga por defecto páginas (vistas), cuando no se especifica una.
+7. **screenshot.png**: Este archivo será nuestra imagen de muestra, en la seleccion de theme en el administrador.
+8. **single.php**: Es la vista que carga por defecto entradas, post , etc, cuando no se especifica una.
