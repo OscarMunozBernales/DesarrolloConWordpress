@@ -292,3 +292,78 @@ echo ($job1->title2);
 
 ?>
 ```
+
+## 3.3. Herencia
+La herencia permite que ciertas clases tengan características de una clase padre. Esta clase se llamará hijo.
+
+Como una buena práctica en PHP lo mejor es tener dividido el código en diferentes archivos. Justo esto es lo que haremos con la definición de la clase Jobs que ahora deberá tener el mismo nombre del archivo, este será BaseElement.php.
+
+Ahora en otro archivo crearemos la clase Job que será hija de BaseElement.php. La herencia la expresaremos con la palabra reservada extends.
+
+Es muy conveniente utilizar require_once cuando queremos utilizar herencia e incluir clases que están en otros archivos.
+
+Dentro de nuestra clase hijo podemos sobrescribir algún método del padre, esto es un concepto que conocemos como polimorfismo. Lo que polimorfismo quiere decir es que tendremos un método que va a funcionar de acuerdo con su contexto donde es llamado.
+
+Si tenemos propiedades con la palabra private en nuestra clase padre, desde nuestra clase hija no podremos acceder a esta propiedad, pero si queremos que siga siendo privada y que las clases hijas tengan acceso podemos usar la palabra clave protected.
+
+Ejemplos:
+BaseElement.php va a ser nuestra clase padre
+```php
+<?php 
+
+class BaseElement{
+
+    /**
+     * public = puede ser accedida desde cualquier parte.
+     * private = solo en la clase se puede acceder.
+     * protected = solo en la clase se puede acceder y en las clases hijas. 
+     */
+    protected $title;
+    public $description;
+    public $visible = true;
+    public $months;
+
+    public function __construct( $title, $description ){
+        $this->title        = $title;
+        $this->description  = $description;
+    }
+
+    public function setTitle( $title ){
+        $this->title = $title == '' ? 'N/A' : $title;
+    }
+
+    public function getTitle(){
+        return $this->title;
+    }
+
+    public function getDurationAsString () {
+        $year = floor( $this->months / 12 );
+        $extraMonths = ($this->months % 12);
+
+        return "$year years $extraMonths months";
+    }
+}
+
+?>
+```
+
+y nuestra clase Job.php va a ser nuestra clase hija, que va a heredar los atributos y funciones de BaseElement
+```php
+<?php
+
+require_once 'BaseElement';
+class Job extends BaseElement{ // con la palabra reservada 'extends' creamos el concepto de herencia.
+
+    public function __construct( $title, $descrition ){
+        $newTitle = 'Job: ' . $title;
+        parent::__construct( $newTitle, $descrition ); // con parent llamamos al constructor de la clase padre
+    }
+
+    public function getDurationAsString () { // acá sobrescribimos el metodo getDurationAsString, concepto de polimorfismo
+        $year = floor( $this->months / 12 );
+        $extraMonths = ($this->months % 12);
+
+        return "Job duration: $year years $extraMonths months";
+    }
+}
+```
