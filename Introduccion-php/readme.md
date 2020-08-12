@@ -367,3 +367,25 @@ class Job extends BaseElement{ // con la palabra reservada 'extends' creamos el 
     }
 }
 ```
+
+## 3.4. Interfaces.
+Las interfaces se pueden ver como un contrato o un acuerdo en el que se pueden estandarizar ciertas cosas.
+
+La palabra reservada que utilizaremos para declarar una interfaz será interface. Y la que nos indicará que estamos usando una interfaz en una clase será implements.
+
+```php
+<?php 
+interface Printable{
+    ....
+}
+?>
+```
+
+Usando Type Hinting estableceremos el tipo de dato que esperamos ya sea una clase o un tipo de dato específico.
+
+La herencia en PHP será de forma sencilla es decir solo que podrá hacer herencia de una sola clase, por lo contrario, con las interfaces que sí podemos implementar varias al mismo tiempo.
+
+## 3.5. Namespaces.
+Esta es una forma de mantener únicos los nombres de los archivos en el mismo directorio.
+Esto nos permite tener mejor organizado el proyecto.
+Para declarar un espacio de nombres privado se utiliza la palabra reservada namespace.
