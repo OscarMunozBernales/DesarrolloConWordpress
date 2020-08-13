@@ -268,3 +268,36 @@ Luego de crear nuestro menú en el administrador, vamos a insertar este menú de
 ```
 Resultado:
 ![](assets/menu.png)
+
+# 11. ¿Que es un Widget?
+Los Widgets de WordPress son bloques de HTML estático o dinámico, contenido que puede ser añadido a zonas específicas de las páginas front-end (zonas widget o barras laterales) WordPress proporciona un buen número de widgets integrados, como Archivos, Categorías, Nube de Etiquetar, Buscar, Publicaciones Recientes, Calendario, y más.
+[Ver más](https://kinsta.com/es/blog/crear-wordpress-widget/)
+
+# 12. Usando Widget.
+Para ocupar un widget vamos a crear un función dentro de nuestro **functions.php** llamada **function sidebar()** en ella vamos a declarar nuestro primer widget que en esta ocuación lo vamos a ocupar en el footer.
+```php
+function sidebar(){
+    register_sidebar([
+        'name'          => 'Pie de página',
+        'id'            => 'footer-sidebar',
+        'description'   => 'Zona de widget para pie de página',
+        'before_title'  => '<p>',
+        'after_title'   => '</p>',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget'  => '</div>'
+    ]);
+}
+
+add_action( 'widgets_init', 'sidebar' );
+```
+
+Luego en nuestro archivo **footer.php** agregamos la funcion de WP llamada **dynamic_sidebar( id_register_sidebar )**
+```html
+<footer>
+    <div class="container">
+        <?php dynamic_sidebar( 'footer-sidebar' ) ?>
+    </div>
+</footer>
+```
+
+En nuestro administrador, dentro de apariencia nos va aparecer la pestaña de widget y dentro de esta, el widget que hemos creado.
