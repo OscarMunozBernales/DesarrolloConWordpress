@@ -184,7 +184,7 @@ add_action( 'init', 'remove_cap_editor');
 
 Puedes ver la lista completa de capabilities por roles en la documentación oficial de WordPress, haciendo [clic aquí](https://wordpress.org/support/article/roles-and-capabilities/#administrator).
 
-# Manejo de librerias
+# 8. Manejo de librerias
 Para poder agregar librerias a nuestro themplate de WP tenemos que agregar una funcion al archivo de **functions.php** indicando que librerias se deben cargar y en que momento, ejemplo:
 ```php
 function assets(){
@@ -202,3 +202,28 @@ add_action( 'wp_enqueue_scripts', 'assets' );
 ```
 
 En esta función registramos la libreria de bootstrap y una fonts, luego agregamos nuestro estilos **style.css** indicando que primero se carguen las librerias que habiamos registrado con anterioridad.
+
+# 9. Agregando javascript a nuestro tema
+De la misma forma que agregamos estilos a nuestro template de WP vamos agregar librerias JS, otra cosa súper importante que debemos saber, es que WP trae consigo la libreria Jquey, solo hay que llamarla para que funcione!
+
+```php
+add_action( 'after_setup_theme', 'init_template' );
+
+function assets(){
+    // VAMOS AGREGAR ESTILOS
+    wp_register_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', '', '4.5.2', 'all' );
+    // FUENTES
+    wp_register_style( 'montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap', '', '1.0', 'all' );
+    // ESTILO PROPIO
+    wp_enqueue_style( 'estilos', get_stylesheet_uri(), array('bootstrap', 'montserrat'), '1.0', 'all' );
+
+
+    // CARGAMOS LIBRERIAS JS
+    wp_register_script( 'popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', '', '1.16.1', true );
+    wp_enqueue_script( 'js-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', ['jquery', 'popper'], '4.5.2', true );
+
+    wp_enqueue_script( 'custom', get_template_directory_uri() . '/assets/js/custom.js', '', '1.0', true );
+}
+
+add_action( 'wp_enqueue_scripts', 'assets' );
+```

@@ -16,6 +16,12 @@ function assets(){
 
     // ESTILO PROPIO
     wp_enqueue_style( 'estilos', get_stylesheet_uri(), array('bootstrap', 'montserrat'), '1.0', 'all' );
+
+    // CARGAMOS LIBRERIAS JS
+    wp_register_script( 'popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', '', '1.16.1', true );
+    wp_enqueue_script( 'js-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', ['jquery', 'popper'], '4.5.2', true );
+
+    wp_enqueue_script( 'custom', get_template_directory_uri() . '/assets/js/custom.js', '', '1.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'assets' );
