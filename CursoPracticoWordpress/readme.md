@@ -227,3 +227,44 @@ function assets(){
 
 add_action( 'wp_enqueue_scripts', 'assets' );
 ```
+# 10. Agregar un menú
+
+Para agregar un menú en nuestro template de WP, tenemos que agregar la funcción ***register_nav_menus()*** que lleva por parametros un array, inicializando los menús que podemos ocupar, para este ejemplo vamos a crear un menú que este en la parte de arriba de nuestro template.
+
+```php
+
+function init_template(){
+    add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'title-tag' );
+
+    register_nav_menus([
+            'top_menu' => 'Menú principal',
+    ]);
+}
+
+add_action( 'after_setup_theme', 'init_template' );
+```
+Ahora dentro de nuestro administrador de WP se nos va habilitar la opción de menú, en lla vamos a crear los distintos enlaces que necesitemos, y le asignamos que ese menú en particular sea la referencia que nosotros le dimos en nuestra funcion **register_nav_menus**
+
+![](assets/menu-principal.png)
+
+Luego de crear nuestro menú en el administrador, vamos a insertar este menú dentro de nuestro código html, con la funcion de WP llamada **wp_nav_menu([])** dentro de esta función tenemos que agregar los siguientes paramtros
+1. El nombre de la instancia de menú que ingresamos en la funcion **register_nav_menus**.
+2. La clase que va a tener el menú, en este caso la etiqueta **ul** que se va a formar.
+3. Y por último el nombre de la clase que va a contener este menú.
+
+```php
+<div class="col-8">
+    <nav>
+        <?php 
+            wp_nav_menu([
+                'theme_location'  => 'top_menu',
+                'menu_class'      => 'menu-principal',
+                'container_class' => 'container-menu',
+            ]); 
+        ?>
+    </nav>
+</div>
+```
+Resultado:
+![](assets/menu.png)
